@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h3 {
+  align-items: center;
+  padding-left: 40%;
+}
+nav {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  background-image: linear-gradient(
+    to right top,
+    #747fe9,
+    #6c8aed,
+    #6794ef,
+    #659df0,
+    #66a6f0,
+    #61a5ea,
+    #5ea4e4,
+    #5ba3de,
+    #4d99d2,
+    #3e8ec6,
+    #2d84bb,
+    #177aaf
+  );
+  padding: 6px 10px;
+  border: 1px solid rgb(134, 173, 197);
+  border-radius: 10px;
+  box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.8),
+    inset 0 2px 2px rgba(255, 255, 255, 1), 0 5px 0 #ccc, 0 6px 0 #989898,
+    0 13px 0 #dfdede;
+}
+.container2 {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  margin-left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid rgb(75, 139, 211);
+  border-radius: 10px;
+  box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.8),
+    inset 0 2px 2px rgba(255, 255, 255, 1), 0 5px 0 #ccc, 0 6px 0 #989898,
+    0 13px 0 #dfdede;
+}
+.papan {
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to right top,
+    #747fe9,
+    #6c8aed,
+    #6794ef,
+    #659df0,
+    #66a6f0,
+    #61a5ea,
+    #5ea4e4,
+    #5ba3de,
+    #4d99d2,
+    #3e8ec6,
+    #2d84bb,
+    #177aaf
+  );
+  margin-left: 100px;
+  height: 450px;
+  padding: 6px 10px;
+  border: 1px solid #b5b5b5;
+  border-radius: 5px;
+  box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.8),
+    inset 0 2px 2px rgba(255, 255, 255, 1), 0 5px 0 #ccc, 0 6px 0 #989898,
+    0 15px 0 #dfdede;
+}
+.resonator {
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to right top,
+    #747fe9,
+    #6c8aed,
+    #6794ef,
+    #659df0,
+    #66a6f0,
+    #61a5ea,
+    #5ea4e4,
+    #5ba3de,
+    #4d99d2,
+    #3e8ec6,
+    #2d84bb,
+    #177aaf
+  );
+  height: 520px;
+  padding: 6px 10px;
+  border: 1px solid #b5b5b5;
+  border-radius: 5px;
+  box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.8),
+    inset 0 2px 2px rgba(255, 255, 255, 1), 0 5px 0 #ccc, 0 6px 0 #989898,
+    0 13px 0 #dfdede;
+}
+.length {
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to right top,
+    #747fe9,
+    #6c8aed,
+    #6794ef,
+    #659df0,
+    #66a6f0,
+    #61a5ea,
+    #5ea4e4,
+    #5ba3de,
+    #4d99d2,
+    #3e8ec6,
+    #2d84bb,
+    #177aaf
+  );
+  height: 590px;
+  padding: 6px 10px;
+  border: 1px solid #b5b5b5;
+  border-radius: 5px;
+  box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.8),
+    inset 0 2px 2px rgba(255, 255, 255, 1), 0 5px 0 #ccc, 0 6px 0 #989898,
+    0 13px 0 #dfdede;
+}
+.box {
+  border-radius: 10px;
+  margin-right: 100px;
+  background-image: linear-gradient(
+    to right top,
+    #747fe9,
+    #6c8aed,
+    #6794ef,
+    #659df0,
+    #66a6f0,
+    #61a5ea,
+    #5ea4e4,
+    #5ba3de,
+    #4d99d2,
+    #3e8ec6,
+    #2d84bb,
+    #177aaf
+  );
+  padding: 16px 10px;
+  border: 1px solid #b5b5b5;
+  border-radius: 5px;
+  box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.8),
+    inset 0 2px 2px rgba(255, 255, 255, 1), 0 5px 0 #ccc, 0 6px 0 #989898,
+    0 13px 0 #dfdede;
+}
+input {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h5 {
+  margin-left: 10px;
+  padding-top: 10px;
+}
+h6 {
+  padding-top: 10px;
+  padding-left: 500px;
+}
+label {
+  margin-left: 10px;
+}
+.ukuran {
+  position: absolute;
+  left: 75%;
+}
+.PlaceHolder {
+  position: relative;
+}
+.btn {
+  color: white;
+  height: 35px;
+  width: 100px;
+  background-color: #2563eb;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 35%;
+}
+.btn:hover {
+  border: 3px solid #2563eb;
+  color: #2563eb;
+  background-color: white;
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .container2 {
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .papan {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+  .resonator {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+  .length {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+  .box {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 1100px) {
+  h3 {
+    display: none;
+  }
+}
