@@ -131,7 +131,7 @@ select{
   border: 2px solid white;
   border-radius: 10px;
   margin-top: 20px;
-  margin-left: 35%;
+  margin-left: 33%;
 }
 .muncul{
   display: none;
@@ -140,11 +140,11 @@ select{
   color: white;
   height: 35px;
   width: 100px;
-  background-color: #2563eb;
+  background-color: #1869ff;
   border: 2px solid white;
   border-radius: 10px;
   margin-top: 20px;
-  margin-left: 35%;
+  margin-left: 33%;
 }
 .btn1:hover {
   border: 3px solid #2563eb;
