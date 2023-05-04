@@ -1,8 +1,8 @@
 import Navbar from "./navbar";
-import Tebalpapan from "@/component/Tebalpapan";
-import DuckResonator from "@/component/DuckResonator";
-import LenghtPort from "@/component/Lenghtport";
-import BoxSpeaker from "@/component/Boxspeaker";
+import Tebalpapan from "../component/TebalPapan";
+import DuckResonator from "../component/Duckresonator";
+import LenghtPort from "../component/Lenghtport";
+import BoxSpeaker from "../component/Boxspeaker";
 export const metadata = {
   title: "Elektronika-Halaman 1",
   description: "",
