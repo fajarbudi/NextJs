@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Boxspeaker() {
   const [gain, setGain] = useState("");
@@ -8,27 +8,54 @@ export default function Boxspeaker() {
   const [volume, setVolume] = useState("");
   const [lebar, setLebar] = useState("");
   const [panjang, setPanjang] = useState("");
+  const [peringatan, setPeringatan] = useState("");
+  const [disable, setDisable] = useState("");
+  const [peringatan2, setPeringatan2] = useState("");
+  const Gain = Number(gain);
+  const Inch = Number(inch);
+  const Tinggi = Number(tinggi);
   const Volume = 2.54 * gain * inch;
   const MiliLiter = 100 * 100 * ((Volume / 1000) * 100);
   const Lebar = inch * 2.54 + 6;
-  const Panjang = MiliLiter / Lebar / tinggi;
+  useEffect(() => {
+    if (gain == "" && inch == "" && tinggi == "") {
+      document.getElementById("button4").classList.remove("btn1");
+      setDisable("disable");
+    } else if (Gain == gain && Inch == inch && Tinggi == tinggi) {
+      document.getElementById("button4").classList.add("btn1");
+      setPeringatan("");
+      setDisable("");
+    } else {
+      document.getElementById("button4").classList.remove("btn1");
+      setDisable("disable");
+      setPeringatan("Masukkan Angka");
+    }
+  });
   const Hitung = () => {
     if (gain > 8) {
-      alert("Value GAIN FAKTOR lebih dari  =  8");
+      setPeringatan2("Lebih Dari 8");
+    } else if (gain < 0.5) {
+      setPeringatan2("Kurang Dari 0. 5");
     } else {
-      setVolume(Volume.toFixed(2));
-      setLebar(Lebar.toFixed(2));
-      setPanjang(Panjang.toFixed(2));
+      setVolume((2.54 * gain * inch).toFixed(2));
+      setLebar((inch * 2.54 + 6).toFixed(2));
+      setPanjang((MiliLiter / Lebar / tinggi).toFixed(2));
     }
   };
   return (
     <>
-      <div className="box animate__animated animate__fadeInRightBig animate__delay-4s">
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+        data-aos-duration="1000"
+        className="box"
+      >
         <h4>Box Speaker</h4>
         <h5>Masukkan :</h5>
         <label htmlFor="Gain">Gain Factor</label>
         <div className="PlaceHolder">
-          <span className="ukuran"></span>
+          <span className="peringatan">{peringatan}</span>
+          <span className="peringatan">{peringatan2}</span>
           <input
             placeholder="Value =  0.5  -  8"
             type="text"
@@ -39,6 +66,7 @@ export default function Boxspeaker() {
         </div>
         <label htmlFor="Inch">Inch</label>
         <div className="PlaceHolder">
+          <span className="peringatan">{peringatan}</span>
           <span className="ukuran">Inch</span>
           <input
             type="text"
@@ -49,6 +77,7 @@ export default function Boxspeaker() {
         </div>
         <label htmlFor="Tinggi">Tinggi Box</label>
         <div className="PlaceHolder">
+          <span className="peringatan">{peringatan}</span>
           <span className="ukuran">Cm</span>
           <input
             type="text"
@@ -89,7 +118,9 @@ export default function Boxspeaker() {
           />
         </div>
         <button
-          className="btn btn-outline-primary center-block"
+          id="button4"
+          disabled={disable}
+          className="btn1 btn2"
           onClick={() => Hitung()}
         >
           Hitung
