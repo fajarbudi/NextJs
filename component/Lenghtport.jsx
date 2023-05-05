@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-
+import { Slide } from "react-awesome-reveal";
 export default function Lenghtport() {
   const [freq, setFreq] = useState("");
   const [volume, setVolume] = useState("");
@@ -41,78 +41,75 @@ export default function Lenghtport() {
   };
   return (
     <>
-      <div
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-center"
-        data-aos-duration="1000"
-        className="length"
-      >
-        <h4>Length Port</h4>
-        <h5>Masukkan :</h5>
-        <label htmlFor="freq">Tunning Freq</label>
-        <div className="PlaceHolder">
-          <span className="peringatan">{peringatan}</span>
-          <span className="ukuran">Hz</span>
-          <input
-            type="text"
-            id="freq"
-            value={freq}
-            onChange={(e) => setFreq(e.target.value)}
-          />
+      <Slide duration={1200} direction="left">
+        <div className="length">
+          <h4>Length Port</h4>
+          <h5>Masukkan :</h5>
+          <label htmlFor="freq">Tunning Freq</label>
+          <div className="PlaceHolder">
+            <span className="peringatan">{peringatan}</span>
+            <span className="ukuran">Hz</span>
+            <input
+              type="text"
+              id="freq"
+              value={freq}
+              onChange={(e) => setFreq(e.target.value)}
+            />
+          </div>
+          <label htmlFor="volume">Volume Box</label>
+          <div className="PlaceHolder">
+            <span className="peringatan">{peringatan}</span>
+            <span className="ukuran">Liter</span>
+            <input
+              type="text"
+              id="volume"
+              value={volume}
+              onChange={(e) => setVolume(e.target.value)}
+            />
+          </div>
+          <label htmlFor="port">Jumlah Port</label>
+          <div className="PlaceHolder">
+            <span className="peringatan">{peringatan}</span>
+            <span className="ukuran"></span>
+            <input
+              type="text"
+              id="port"
+              value={port}
+              onChange={(e) => setPort(e.target.value)}
+            />
+          </div>
+          <label htmlFor="diameter">Diameter Port</label>
+          <div className="PlaceHolder">
+            <span className="peringatan">{peringatan}</span>
+            <span className="ukuran">Cm</span>
+            <input
+              type="text"
+              id="diameter"
+              value={diameter}
+              onChange={(e) => setDiameter(e.target.value)}
+            />
+          </div>
+          <h5>Hasil :</h5>
+          <label htmlFor="lenght">Lenght Port</label>
+          <div className="PlaceHolder">
+            <span className="ukuran">Cm</span>
+            <input
+              type="text"
+              id="lenght"
+              value={lenght}
+              onChange={(e) => setLenght(e.target.value)}
+            />
+          </div>
+          <button
+            id="button3"
+            disabled={disable}
+            className="btn1 btn2"
+            onClick={() => Hitung()}
+          >
+            Hitung
+          </button>
         </div>
-        <label htmlFor="volume">Volume Box</label>
-        <div className="PlaceHolder">
-          <span className="peringatan">{peringatan}</span>
-          <span className="ukuran">Liter</span>
-          <input
-            type="text"
-            id="volume"
-            value={volume}
-            onChange={(e) => setVolume(e.target.value)}
-          />
-        </div>
-        <label htmlFor="port">Jumlah Port</label>
-        <div className="PlaceHolder">
-          <span className="peringatan">{peringatan}</span>
-          <span className="ukuran"></span>
-          <input
-            type="text"
-            id="port"
-            value={port}
-            onChange={(e) => setPort(e.target.value)}
-          />
-        </div>
-        <label htmlFor="diameter">Diameter Port</label>
-        <div className="PlaceHolder">
-          <span className="peringatan">{peringatan}</span>
-          <span className="ukuran">Cm</span>
-          <input
-            type="text"
-            id="diameter"
-            value={diameter}
-            onChange={(e) => setDiameter(e.target.value)}
-          />
-        </div>
-        <h5>Hasil :</h5>
-        <label htmlFor="lenght">Lenght Port</label>
-        <div className="PlaceHolder">
-          <span className="ukuran">Cm</span>
-          <input
-            type="text"
-            id="lenght"
-            value={lenght}
-            onChange={(e) => setLenght(e.target.value)}
-          />
-        </div>
-        <button
-          id="button3"
-          disabled={disable}
-          className="btn1 btn2"
-          onClick={() => Hitung()}
-        >
-          Hitung
-        </button>
-      </div>
+      </Slide>
     </>
   );
 }

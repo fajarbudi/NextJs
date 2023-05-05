@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-
+import { Slide } from "react-awesome-reveal";
 export default function Boxspeaker() {
   const [gain, setGain] = useState("");
   const [inch, setInch] = useState("");
@@ -44,88 +44,85 @@ export default function Boxspeaker() {
   };
   return (
     <>
-      <div
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-center"
-        data-aos-duration="1000"
-        className="box"
-      >
-        <h4>Box Speaker</h4>
-        <h5>Masukkan :</h5>
-        <label htmlFor="Gain">Gain Factor</label>
-        <div className="PlaceHolder">
-          <span className="peringatan">{peringatan}</span>
-          <span className="peringatan">{peringatan2}</span>
-          <input
-            placeholder="Value =  0.5  -  8"
-            type="text"
-            id="Gain"
-            value={gain}
-            onChange={(e) => setGain(e.target.value)}
-          />
+      <Slide duration={1200} direction="left">
+        <div className="box">
+          <h4>Box Speaker</h4>
+          <h5>Masukkan :</h5>
+          <label htmlFor="Gain">Gain Factor</label>
+          <div className="PlaceHolder">
+            <span className="peringatan">{peringatan}</span>
+            <span className="peringatan">{peringatan2}</span>
+            <input
+              placeholder="Value =  0.5  -  8"
+              type="text"
+              id="Gain"
+              value={gain}
+              onChange={(e) => setGain(e.target.value)}
+            />
+          </div>
+          <label htmlFor="Inch">Inch</label>
+          <div className="PlaceHolder">
+            <span className="peringatan">{peringatan}</span>
+            <span className="ukuran">Inch</span>
+            <input
+              type="text"
+              id="Inch"
+              value={inch}
+              onChange={(e) => setInch(e.target.value)}
+            />
+          </div>
+          <label htmlFor="Tinggi">Tinggi Box</label>
+          <div className="PlaceHolder">
+            <span className="peringatan">{peringatan}</span>
+            <span className="ukuran">Cm</span>
+            <input
+              type="text"
+              id="Tinggi"
+              value={tinggi}
+              onChange={(e) => setTinggi(e.target.value)}
+            />
+          </div>
+          <h5>Hasil :</h5>
+          <label htmlFor="Volume">Volume Box</label>
+          <div className="PlaceHolder">
+            <span className="ukuran">Liter</span>
+            <input
+              type="text"
+              id="Volume"
+              value={volume}
+              onChange={(e) => setVolume(e.target.value)}
+            />
+          </div>
+          <label htmlFor="Lebar">Lebar Box</label>
+          <div className="PlaceHolder">
+            <span className="ukuran">Cm</span>
+            <input
+              type="text"
+              id="Lebar"
+              value={lebar}
+              onChange={(e) => setLebar(e.target.value)}
+            />
+          </div>
+          <label htmlFor="Panjang">Panjang Box</label>
+          <div className="PlaceHolder">
+            <span className="ukuran">Cm</span>
+            <input
+              type="text"
+              id="Panjang"
+              value={panjang}
+              onChange={(e) => setPanjang(e.target.value)}
+            />
+          </div>
+          <button
+            id="button4"
+            disabled={disable}
+            className="btn1 btn2"
+            onClick={() => Hitung()}
+          >
+            Hitung
+          </button>
         </div>
-        <label htmlFor="Inch">Inch</label>
-        <div className="PlaceHolder">
-          <span className="peringatan">{peringatan}</span>
-          <span className="ukuran">Inch</span>
-          <input
-            type="text"
-            id="Inch"
-            value={inch}
-            onChange={(e) => setInch(e.target.value)}
-          />
-        </div>
-        <label htmlFor="Tinggi">Tinggi Box</label>
-        <div className="PlaceHolder">
-          <span className="peringatan">{peringatan}</span>
-          <span className="ukuran">Cm</span>
-          <input
-            type="text"
-            id="Tinggi"
-            value={tinggi}
-            onChange={(e) => setTinggi(e.target.value)}
-          />
-        </div>
-        <h5>Hasil :</h5>
-        <label htmlFor="Volume">Volume Box</label>
-        <div className="PlaceHolder">
-          <span className="ukuran">Liter</span>
-          <input
-            type="text"
-            id="Volume"
-            value={volume}
-            onChange={(e) => setVolume(e.target.value)}
-          />
-        </div>
-        <label htmlFor="Lebar">Lebar Box</label>
-        <div className="PlaceHolder">
-          <span className="ukuran">Cm</span>
-          <input
-            type="text"
-            id="Lebar"
-            value={lebar}
-            onChange={(e) => setLebar(e.target.value)}
-          />
-        </div>
-        <label htmlFor="Panjang">Panjang Box</label>
-        <div className="PlaceHolder">
-          <span className="ukuran">Cm</span>
-          <input
-            type="text"
-            id="Panjang"
-            value={panjang}
-            onChange={(e) => setPanjang(e.target.value)}
-          />
-        </div>
-        <button
-          id="button4"
-          disabled={disable}
-          className="btn1 btn2"
-          onClick={() => Hitung()}
-        >
-          Hitung
-        </button>
-      </div>
+      </Slide>
     </>
   );
 }

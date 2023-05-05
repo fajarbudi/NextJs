@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-
+import { Slide } from "react-awesome-reveal";
 export default function MenentukanWaat() {
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
@@ -42,71 +42,68 @@ export default function MenentukanWaat() {
   };
   return (
     <>
-      <div
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-center"
-        data-aos-duration="1000"
-        className="kotak_1"
-      >
-        <h4>Menentukan Watt</h4>
-        <h5>Masukan :</h5>
-        <label htmlFor="volt">Volt / Ampere</label>
-        <div className="PlaceHolder">
-          <span className="peringatan">{peringatan}</span>
-          <select
-            className="ukuran"
-            value={select1}
-            onChange={(e) => setSelect1(e.target.value)}
+      <Slide duration={1200} direction="left">
+        <div className="kotak_1">
+          <h4>Menentukan Watt</h4>
+          <h5>Masukan :</h5>
+          <label htmlFor="volt">Volt / Ampere</label>
+          <div className="PlaceHolder">
+            <span className="peringatan">{peringatan}</span>
+            <select
+              className="ukuran"
+              value={select1}
+              onChange={(e) => setSelect1(e.target.value)}
+            >
+              <option value="volt1">Volt</option>
+              <option value="amp1">Amp</option>
+            </select>
+            <input
+              id="volt"
+              type="text"
+              inputMode="numeric"
+              value={input1}
+              onChange={(e) => setInput1(e.target.value)}
+            />
+          </div>
+          <label htmlFor="beban">Ohm / Volt</label>
+          <div className="PlaceHolder">
+            <span className="peringatan">{peringatan}</span>
+            <select
+              className="ukuran"
+              value={select2}
+              onChange={(e) => setSelect2(e.target.value)}
+            >
+              <option value="ohm">Ohm</option>
+              <option value="amp2">Amp</option>
+            </select>
+            <input
+              id="beban"
+              type="text"
+              value={input2}
+              onChange={(e) => setInput2(e.target.value)}
+            />
+          </div>
+          <h5>Hasil :</h5>
+          <label htmlFor="watt">Watt</label>
+          <div className="PlaceHolder">
+            <span className="ukuran"> Watt</span>
+            <input
+              id="watt"
+              type="text"
+              value={watt}
+              onChange={(e) => setWatt(e.target.value)}
+            />
+          </div>
+          <button
+            id="button1"
+            disabled={disable}
+            className="btn1 btn2"
+            onClick={() => Hitung()}
           >
-            <option value="volt1">Volt</option>
-            <option value="amp1">Amp</option>
-          </select>
-          <input
-            id="volt"
-            type="text"
-            inputMode="numeric"
-            value={input1}
-            onChange={(e) => setInput1(e.target.value)}
-          />
+            Hitung
+          </button>
         </div>
-        <label htmlFor="beban">Ohm / Volt</label>
-        <div className="PlaceHolder">
-          <span className="peringatan">{peringatan}</span>
-          <select
-            className="ukuran"
-            value={select2}
-            onChange={(e) => setSelect2(e.target.value)}
-          >
-            <option value="ohm">Ohm</option>
-            <option value="amp2">Amp</option>
-          </select>
-          <input
-            id="beban"
-            type="text"
-            value={input2}
-            onChange={(e) => setInput2(e.target.value)}
-          />
-        </div>
-        <h5>Hasil :</h5>
-        <label htmlFor="watt">Watt</label>
-        <div className="PlaceHolder">
-          <span className="ukuran"> Watt</span>
-          <input
-            id="watt"
-            type="text"
-            value={watt}
-            onChange={(e) => setWatt(e.target.value)}
-          />
-        </div>
-        <button
-          id="button1"
-          disabled={disable}
-          className="btn1 btn2"
-          onClick={() => Hitung()}
-        >
-          Hitung
-        </button>
-      </div>
+      </Slide>
     </>
   );
 }

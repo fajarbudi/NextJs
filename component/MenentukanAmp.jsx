@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { Slide } from "react-awesome-reveal";
 export default function () {
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
@@ -41,70 +42,67 @@ export default function () {
   };
   return (
     <>
-      <div
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-center"
-        data-aos-duration="1000"
-        className="kotak_1"
-      >
-        <h4>Menentukan Ampere</h4>
-        <h5>Masukkan :</h5>
-        <label htmlFor="volt">Volt / Watt</label>
-        <div className="PlaceHolder">
-          <span className="peringatan">{peringatan}</span>
-          <select
-            className="ukuran"
-            value={pilih}
-            onChange={(e) => setPilih(e.target.value)}
+      <Slide duration={1200} direction="left">
+        <div className="kotak_1">
+          <h4>Menentukan Ampere</h4>
+          <h5>Masukkan :</h5>
+          <label htmlFor="volt">Volt / Watt</label>
+          <div className="PlaceHolder">
+            <span className="peringatan">{peringatan}</span>
+            <select
+              className="ukuran"
+              value={pilih}
+              onChange={(e) => setPilih(e.target.value)}
+            >
+              <option value="volt1">Volt</option>
+              <option value="watt">Watt</option>
+            </select>
+            <input
+              id="volt"
+              type="text"
+              value={input1}
+              onChange={(e) => setInput1(e.target.value)}
+            />
+          </div>
+          <label htmlFor="hambatan">Volt / Ohm</label>
+          <div className="PlaceHolder">
+            <span className="peringatan">{peringatan}</span>
+            <select
+              className="ukuran"
+              value={pilih2}
+              onChange={(e) => setPilih2(e.target.value)}
+            >
+              <option value="volt2">Volt</option>
+              <option value="HI">Ohm</option>
+            </select>
+            <input
+              id="hambatan"
+              type="text"
+              value={input2}
+              onChange={(e) => setInput2(e.target.value)}
+            />
+          </div>
+          <h5>Hasil :</h5>
+          <label htmlFor="ampere">Ampere</label>
+          <div className="PlaceHolder">
+            <span className="ukuran"> Amp</span>
+            <input
+              id="ampere"
+              type="text"
+              value={ampere}
+              onChange={(e) => setAmpere(e.target.value)}
+            />
+          </div>
+          <button
+            id="button2"
+            className="btn1 btn2"
+            disabled={disable}
+            onClick={() => Hitung()}
           >
-            <option value="volt1">Volt</option>
-            <option value="watt">Watt</option>
-          </select>
-          <input
-            id="volt"
-            type="text"
-            value={input1}
-            onChange={(e) => setInput1(e.target.value)}
-          />
+            Hitung
+          </button>
         </div>
-        <label htmlFor="hambatan">Volt / Ohm</label>
-        <div className="PlaceHolder">
-          <span className="peringatan">{peringatan}</span>
-          <select
-            className="ukuran"
-            value={pilih2}
-            onChange={(e) => setPilih2(e.target.value)}
-          >
-            <option value="volt2">Volt</option>
-            <option value="HI">Ohm</option>
-          </select>
-          <input
-            id="hambatan"
-            type="text"
-            value={input2}
-            onChange={(e) => setInput2(e.target.value)}
-          />
-        </div>
-        <h5>Hasil :</h5>
-        <label htmlFor="ampere">Ampere</label>
-        <div className="PlaceHolder">
-          <span className="ukuran"> Amp</span>
-          <input
-            id="ampere"
-            type="text"
-            value={ampere}
-            onChange={(e) => setAmpere(e.target.value)}
-          />
-        </div>
-        <button
-          id="button2"
-          className="btn1 btn2"
-          disabled={disable}
-          onClick={() => Hitung()}
-        >
-          Hitung
-        </button>
-      </div>
+      </Slide>
     </>
   );
 }

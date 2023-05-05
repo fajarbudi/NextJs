@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-
+import { Slide } from "react-awesome-reveal";
 export default function Duckresonator() {
   const [gain, setGain] = useState("");
   const [lingkaran, setLingkaran] = useState("");
@@ -41,67 +41,64 @@ export default function Duckresonator() {
   };
   return (
     <>
-      <div
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-center"
-        data-aos-duration="1000"
-        className="resonator"
-      >
-        <h4>Duck Resonator</h4>
-        <h5>Masukkan :</h5>
-        <label htmlFor="Gain1">Gain Factor</label>
-        <div className="PlaceHolder">
-          <span className="peringatan">{peringatan}</span>
-          <span className="peringatan">{peringatan2}</span>
-          <input
-            placeholder="Value = 0.5  -  8"
-            type="text"
-            id="Gain1"
-            value={gain}
-            onChange={(e) => setGain(e.target.value)}
-          />
+      <Slide duration={1200} direction="left">
+        <div className="resonator">
+          <h4>Duck Resonator</h4>
+          <h5>Masukkan :</h5>
+          <label htmlFor="Gain1">Gain Factor</label>
+          <div className="PlaceHolder">
+            <span className="peringatan">{peringatan}</span>
+            <span className="peringatan">{peringatan2}</span>
+            <input
+              placeholder="Value = 0.5  -  8"
+              type="text"
+              id="Gain1"
+              value={gain}
+              onChange={(e) => setGain(e.target.value)}
+            />
+          </div>
+          <label htmlFor="Inch">Inch</label>
+          <div className="PlaceHolder">
+            <span className="peringatan">{peringatan}</span>
+            <span className="ukuran">Inch</span>
+            <input
+              type="text"
+              id="Inch"
+              value={inch}
+              onChange={(e) => setInch(e.target.value)}
+            />
+          </div>
+          <h5>Hasil :</h5>
+          <label htmlFor="Wood">Lingkaran</label>
+          <div className="PlaceHolder">
+            <span className="ukuran">Cm</span>
+            <input
+              type="text"
+              id="Wood"
+              value={lingkaran}
+              onChange={(e) => setLingkaran(e.target.value)}
+            />
+          </div>
+          <label htmlFor="Wood">Persegi</label>
+          <div className="PlaceHolder">
+            <span className="ukuran">Cm</span>
+            <input
+              type="text"
+              id="Wood"
+              value={persegi}
+              onChange={(e) => setPersegi(e.target.value)}
+            />
+          </div>
+          <button
+            disabled={disable}
+            id="button2"
+            className="btn1 btn2"
+            onClick={() => Hitung1()}
+          >
+            Hitung
+          </button>
         </div>
-        <label htmlFor="Inch">Inch</label>
-        <div className="PlaceHolder">
-          <span className="peringatan">{peringatan}</span>
-          <span className="ukuran">Inch</span>
-          <input
-            type="text"
-            id="Inch"
-            value={inch}
-            onChange={(e) => setInch(e.target.value)}
-          />
-        </div>
-        <h5>Hasil :</h5>
-        <label htmlFor="Wood">Lingkaran</label>
-        <div className="PlaceHolder">
-          <span className="ukuran">Cm</span>
-          <input
-            type="text"
-            id="Wood"
-            value={lingkaran}
-            onChange={(e) => setLingkaran(e.target.value)}
-          />
-        </div>
-        <label htmlFor="Wood">Persegi</label>
-        <div className="PlaceHolder">
-          <span className="ukuran">Cm</span>
-          <input
-            type="text"
-            id="Wood"
-            value={persegi}
-            onChange={(e) => setPersegi(e.target.value)}
-          />
-        </div>
-        <button
-          disabled={disable}
-          id="button2"
-          className="btn1 btn2"
-          onClick={() => Hitung1()}
-        >
-          Hitung
-        </button>
-      </div>
+      </Slide>
     </>
   );
 }

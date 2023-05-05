@@ -8,15 +8,15 @@ export const metadata = {
   description: "",
 };
 export default function halaman1() {
-  return (
-    <>
-      <Navbar judul="Menghitung Box Speaker" />
-      <div className="container2 ">
-        <Tebalpapan />
-        <DuckResonator />
-        <LenghtPort />
-        <BoxSpeaker />
-      </div>
-    </>
-  );
+    return (
+      <>
+        <Navbar judul="Menghitung Box Speaker" />
+        <div className="container2 ">
+          <Tebalpapan />
+          <DuckResonator />
+          <LenghtPort />
+          <BoxSpeaker />
+        </div>
+      </>
+    );
 }

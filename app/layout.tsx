@@ -7,9 +7,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
+    return (
+      <html lang="en">
+        <body className={inter.className}>{children}</body>
+      </html>
+    );
 }
