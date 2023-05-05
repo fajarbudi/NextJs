@@ -1,7 +1,7 @@
 "use client";
 import "./globals.css";
 import { Montserrat } from "next/font/google";
-const inter = Montserrat({ weight: "300", subsets: ["latin"] });
+const inter = Montserrat({ weight: "400", subsets: ["latin"] });
 export default function RootLayout({
   children,
 }: {

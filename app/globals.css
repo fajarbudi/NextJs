@@ -14,7 +14,7 @@ h3 {
   padding-left: 40%;
 }
 nav {
-  background-image: linear-gradient(to right bottom, #bf8bf0, #a794f8, #8d9dfd, #72a4fe, #56aafc, #50a7f6, #4aa5f1, #44a2eb, #5097e3, #5b8cda, #6580d0, #6d75c5);
+  background-image: linear-gradient(to right bottom, #3afbc0, #00eae2, #00d5fc, #00bcff, #00a0fd, #009cf8, #0099f2, #0095ed, #00a8eb, #00b6d9, #00c1bb, #2cc999);
   padding: 6px 10px;
   border: 1px solid rgb(134, 173, 197);
   border-radius: 10px;
@@ -36,7 +36,7 @@ nav {
 .kotak_1 {
   position: relative;
   border-radius: 10px;
-  background-image: linear-gradient(to right bottom, #bf8bf0, #a794f8, #8d9dfd, #72a4fe, #56aafc, #50a7f6, #4aa5f1, #44a2eb, #5097e3, #5b8cda, #6580d0, #6d75c5);
+  background-image: linear-gradient(to right bottom, #3afbc0, #00eae2, #00d5fc, #00bcff, #00a0fd, #009cf8, #0099f2, #0095ed, #00a8eb, #00b6d9, #00c1bb, #2cc999);
   margin-bottom: 20px;
   height: 450px;
   padding: 6px 10px;
@@ -48,7 +48,7 @@ nav {
 }
 .resonator {
   border-radius: 10px;
-  background-image: linear-gradient(to right bottom, #bf8bf0, #a794f8, #8d9dfd, #72a4fe, #56aafc, #50a7f6, #4aa5f1, #44a2eb, #5097e3, #5b8cda, #6580d0, #6d75c5);
+  background-image: linear-gradient(to right bottom, #3afbc0, #00eae2, #00d5fc, #00bcff, #00a0fd, #009cf8, #0099f2, #0095ed, #00a8eb, #00b6d9, #00c1bb, #2cc999);
   height: 520px;
   padding: 6px 10px;
   border: 1px solid #b5b5b5;
@@ -59,7 +59,7 @@ nav {
 }
 .length {
   border-radius: 10px;
-  background-image: linear-gradient(to right bottom, #bf8bf0, #a794f8, #8d9dfd, #72a4fe, #56aafc, #50a7f6, #4aa5f1, #44a2eb, #5097e3, #5b8cda, #6580d0, #6d75c5);
+  background-image: linear-gradient(to right bottom, #3afbc0, #00eae2, #00d5fc, #00bcff, #00a0fd, #009cf8, #0099f2, #0095ed, #00a8eb, #00b6d9, #00c1bb, #2cc999);
   height: 590px;
   padding: 6px 10px;
   border: 1px solid #b5b5b5;
@@ -70,7 +70,7 @@ nav {
 }
 .box {
   border-radius: 10px;
-  background-image: linear-gradient(to right bottom, #bf8bf0, #a794f8, #8d9dfd, #72a4fe, #56aafc, #50a7f6, #4aa5f1, #44a2eb, #5097e3, #5b8cda, #6580d0, #6d75c5);
+  background-image: linear-gradient(to right bottom, #3afbc0, #00eae2, #00d5fc, #00bcff, #00a0fd, #009cf8, #0099f2, #0095ed, #00a8eb, #00b6d9, #00c1bb, #2cc999);
   padding: 16px 10px;
   border: 1px solid #b5b5b5;
   border-radius: 20px;
