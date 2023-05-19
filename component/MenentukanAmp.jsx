@@ -55,7 +55,7 @@ export default function () {
             </select>
             <input
               id="volt"
-              type="numeric"
+              inputMode="numeric"
               value={input1}
               onChange={(e) => setInput1(e.target.value)}
             />
@@ -72,7 +72,7 @@ export default function () {
             </select>
             <input
               id="hambatan"
-              type="numeric"
+              inputMode="numeric"
               value={input2}
               onChange={(e) => setInput2(e.target.value)}
             />

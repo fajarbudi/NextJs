@@ -54,7 +54,7 @@ export default function MenentukanResistance() {
               <option value="volt">Volt</option>
             </select>
             <input
-              type="numeric"
+              inputMode="numeric"
               id="input1"
               value={input1}
               onChange={(e) => setInput1(e.target.value)}
@@ -71,7 +71,7 @@ export default function MenentukanResistance() {
               <option value="ampere">Amp</option>
             </select>
             <input
-              type="numeric"
+              inputMode="numeric"
               id="input2"
               value={input2}
               onChange={(e) => setInput2(e.target.value)}

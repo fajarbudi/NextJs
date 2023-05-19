@@ -48,7 +48,7 @@ export default function Duckresonator() {
             <span className="peringatan">{peringatan}</span>
             <input
               placeholder="Value = 0.5  -  8"
-              type="numeric"
+              inputMode="numeric"
               id="Gain1"
               value={gain}
               onChange={(e) => setGain(e.target.value)}
@@ -58,7 +58,7 @@ export default function Duckresonator() {
           <div className="PlaceHolder">
             <span className="ukuran">Inch</span>
             <input
-              type="numeric"
+              inputMode="numeric"
               id="Inch"
               value={inch}
               onChange={(e) => setInch(e.target.value)}

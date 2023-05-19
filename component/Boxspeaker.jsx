@@ -51,7 +51,7 @@ export default function Boxspeaker() {
             <span className="peringatan">{peringatan}</span>
             <input
               placeholder="Value =  0.5  -  8"
-              type="numeric"
+              inputMode="numeric"
               id="Gain"
               value={gain}
               onChange={(e) => setGain(e.target.value)}
@@ -61,7 +61,7 @@ export default function Boxspeaker() {
           <div className="PlaceHolder">
             <span className="ukuran">Inch</span>
             <input
-              type="numeric"
+              inputMode="numeric"
               id="Inch"
               value={inch}
               onChange={(e) => setInch(e.target.value)}
@@ -71,7 +71,7 @@ export default function Boxspeaker() {
           <div className="PlaceHolder">
             <span className="ukuran">Cm</span>
             <input
-              type="numeric"
+              inputMode="numeric"
               id="Tinggi"
               value={tinggi}
               onChange={(e) => setTinggi(e.target.value)}

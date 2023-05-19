@@ -33,7 +33,7 @@ export default function TebalPapan2() {
           <div className="PlaceHolder">
             <span className="ukuran">Inch</span>
             <input
-              type="numeric"
+              inputMode="numeric"
               id="inch"
               value={input}
               onChange={(e) => setInput(e.target.value)}

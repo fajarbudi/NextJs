@@ -46,7 +46,7 @@ export default function Lenghtport() {
           <div className="PlaceHolder">
             <span className="ukuran">Hz</span>
             <input
-              type="numeric"
+              inputMode="numeric"
               id="freq"
               value={freq}
               onChange={(e) => setFreq(e.target.value)}
@@ -56,7 +56,7 @@ export default function Lenghtport() {
           <div className="PlaceHolder">
             <span className="ukuran">Liter</span>
             <input
-              type="numeric"
+              inputMode="numeric"
               id="volume"
               value={volume}
               onChange={(e) => setVolume(e.target.value)}
@@ -66,7 +66,7 @@ export default function Lenghtport() {
           <div className="PlaceHolder">
             <span className="ukuran"></span>
             <input
-              type="numeric"
+              inputMode="numeric"
               id="port"
               value={port}
               onChange={(e) => setPort(e.target.value)}
@@ -76,7 +76,7 @@ export default function Lenghtport() {
           <div className="PlaceHolder">
             <span className="ukuran">Cm</span>
             <input
-              type="numeric"
+              inputMode="numeric"
               id="diameter"
               value={diameter}
               onChange={(e) => setDiameter(e.target.value)}
