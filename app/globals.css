@@ -102,9 +102,9 @@ select{
   background-color: transparent;
 }
 .peringatan{
-  color: red;
+  color: rgb(255, 255, 255);
   font-weight: 300;
-  left: 45%;
+  left: 55%;
   top: -90%;
   position: absolute;
 }
