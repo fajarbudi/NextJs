@@ -7,7 +7,6 @@ export default function MenentukanVolt() {
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
   const [volt, setVolt] = useState("");
-  const [peringatan, setPeringatan] = useState("");
   const [disable, setDisable] = useState("");
   const Input1 = Number(input1);
   const Input2 = Number(input2);
@@ -16,16 +15,14 @@ export default function MenentukanVolt() {
     setSelect2("ohm");
   }, []);
   useEffect(() => {
-    if (input1 == 0 && input2 == 0) {
+    if (Input1 == 0 && Input2 == 0) {
       document.getElementById("button3").classList.remove("btn1");
       setDisable("disable");
     } else if (Input1 == input1 && Input2 == input2) {
       document.getElementById("button3").classList.add("btn1");
-      setPeringatan("");
       setDisable("");
     } else {
       document.getElementById("button3").classList.remove("btn1");
-      setPeringatan("Masukkan Angka");
       setDisable("disable");
     }
   });
@@ -37,7 +34,7 @@ export default function MenentukanVolt() {
     } else if (select1 === "watt" && select2 === "ohm") {
       setVolt(Math.sqrt(input1 * input2).toFixed(2));
     } else {
-      setVolt("SALAH");
+      setVolt("Rumusnya Salah");
     }
   };
   return (
@@ -48,7 +45,6 @@ export default function MenentukanVolt() {
           <h5>Masukkan :</h5>
           <label htmlFor="input1">Ampere / Watt</label>
           <div className="PlaceHolder">
-            <span className="peringatan">{peringatan}</span>
             <select
               className="ukuran"
               value={select1}
@@ -58,6 +54,7 @@ export default function MenentukanVolt() {
               <option value="ampere1">Amp</option>
             </select>
             <input
+              type="numeric"
               id="input1"
               value={input1}
               onChange={(e) => setInput1(e.target.value)}
@@ -65,7 +62,6 @@ export default function MenentukanVolt() {
           </div>
           <label htmlFor="input2">Ampere / Ohm</label>
           <div className="PlaceHolder">
-            <span className="peringatan">{peringatan}</span>
             <select
               className="ukuran"
               value={select2}
@@ -75,6 +71,7 @@ export default function MenentukanVolt() {
               <option value="ohm">Ohm</option>
             </select>
             <input
+              type="numeric"
               id="input2"
               value={input2}
               onChange={(e) => setInput2(e.target.value)}

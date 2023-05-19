@@ -7,7 +7,6 @@ export default function MenentukanWaat() {
   const [watt, setWatt] = useState("");
   const [select1, setSelect1] = useState("");
   const [select2, setSelect2] = useState("");
-  const [peringatan, setPeringatan] = useState("");
   const [disable, setDisable] = useState("");
   const Input1 = Number(input1);
   const Input2 = Number(input2);
@@ -16,16 +15,14 @@ export default function MenentukanWaat() {
     setSelect2("ohm");
   }, []);
   useEffect(() => {
-    if (input1 == 0 && input2 == 0) {
+    if (!input1 && !input2) {
       document.getElementById("button1").classList.remove("btn1");
       setDisable("disable");
     } else if (Input1 == input1 && Input2 == input2) {
       document.getElementById("button1").classList.add("btn1");
-      setPeringatan("");
       setDisable("");
     } else {
       document.getElementById("button1").classList.remove("btn1");
-      setPeringatan("Masukan angka");
       setDisable("disable");
     }
   });
@@ -48,7 +45,6 @@ export default function MenentukanWaat() {
           <h5>Masukan :</h5>
           <label htmlFor="volt">Volt / Ampere</label>
           <div className="PlaceHolder">
-            <span className="peringatan">{peringatan}</span>
             <select
               className="ukuran"
               value={select1}
@@ -59,15 +55,13 @@ export default function MenentukanWaat() {
             </select>
             <input
               id="volt"
-              type="text"
-              inputMode="numeric"
+              type="numeric"
               value={input1}
               onChange={(e) => setInput1(e.target.value)}
             />
           </div>
           <label htmlFor="beban">Ohm / Volt</label>
           <div className="PlaceHolder">
-            <span className="peringatan">{peringatan}</span>
             <select
               className="ukuran"
               value={select2}
@@ -78,7 +72,7 @@ export default function MenentukanWaat() {
             </select>
             <input
               id="beban"
-              type="text"
+              type="numeric"
               value={input2}
               onChange={(e) => setInput2(e.target.value)}
             />

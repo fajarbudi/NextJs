@@ -7,7 +7,6 @@ export default function () {
   const [ampere, setAmpere] = useState("");
   const [pilih, setPilih] = useState("");
   const [pilih2, setPilih2] = useState("");
-  const [peringatan, setPeringatan] = useState("");
   const [disable, setDisable] = useState("");
   const Input1 = Number(input1);
   const Input2 = Number(input2);
@@ -21,11 +20,9 @@ export default function () {
       setDisable("disable");
     } else if (Input1 == input1 && Input2 == input2) {
       document.getElementById("button2").classList.add("btn1");
-      setPeringatan("");
       setDisable("");
     } else {
       document.getElementById("button2").classList.remove("btn1");
-      setPeringatan("Masukkan Angka");
       setDisable("disable");
     }
   });
@@ -37,7 +34,7 @@ export default function () {
     } else if ((pilih === "watt", pilih2 === "HI")) {
       setAmpere(Math.sqrt(input1 / input2).toFixed(2));
     } else {
-      setAmpere("SALAH");
+      setAmpere("Rumusnya Salah");
     }
   };
   return (
@@ -48,7 +45,6 @@ export default function () {
           <h5>Masukkan :</h5>
           <label htmlFor="volt">Volt / Watt</label>
           <div className="PlaceHolder">
-            <span className="peringatan">{peringatan}</span>
             <select
               className="ukuran"
               value={pilih}
@@ -59,14 +55,13 @@ export default function () {
             </select>
             <input
               id="volt"
-              type="text"
+              type="numeric"
               value={input1}
               onChange={(e) => setInput1(e.target.value)}
             />
           </div>
           <label htmlFor="hambatan">Volt / Ohm</label>
           <div className="PlaceHolder">
-            <span className="peringatan">{peringatan}</span>
             <select
               className="ukuran"
               value={pilih2}
@@ -77,7 +72,7 @@ export default function () {
             </select>
             <input
               id="hambatan"
-              type="text"
+              type="numeric"
               value={input2}
               onChange={(e) => setInput2(e.target.value)}
             />

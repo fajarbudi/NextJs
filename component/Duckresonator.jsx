@@ -7,7 +7,6 @@ export default function Duckresonator() {
   const [persegi, setPersegi] = useState("");
   const [inch, setInch] = useState("");
   const [peringatan, setPeringatan] = useState("");
-  const [peringatan2, setPeringatan2] = useState("");
   const [disable, setDisable] = useState("");
   const Inch = Number(inch);
   const Gain = Number(gain);
@@ -22,21 +21,20 @@ export default function Duckresonator() {
     } else if (Inch == inch && Gain == gain) {
       document.getElementById("button2").classList.add("btn1");
       setDisable("");
-      setPeringatan("");
     } else {
       document.getElementById("button2").classList.remove("btn1");
       setDisable("disable");
-      setPeringatan("Masukkan Angka");
     }
   });
   const Hitung1 = () => {
     if (gain > 8) {
-      setPeringatan2("Lebih Dari 8");
+      setPeringatan("Lebih Dari 8");
     } else if (gain < 0.5) {
-      setPeringatan2("Kurang Dari 0. 5");
+      setPeringatan("Kurang Dari 0. 5");
     } else {
+      setPeringatan("");
       setLingkaran(Diameter.toFixed(2));
-      setPersegi(Persegi_L.toFixed(2) + " X " + Persegi_P);
+      setPersegi(Persegi_L.toFixed(2) + "   X   " + Persegi_P);
     }
   };
   return (
@@ -48,10 +46,9 @@ export default function Duckresonator() {
           <label htmlFor="Gain1">Gain Factor</label>
           <div className="PlaceHolder">
             <span className="peringatan">{peringatan}</span>
-            <span className="peringatan">{peringatan2}</span>
             <input
               placeholder="Value = 0.5  -  8"
-              type="text"
+              type="numeric"
               id="Gain1"
               value={gain}
               onChange={(e) => setGain(e.target.value)}
@@ -59,10 +56,9 @@ export default function Duckresonator() {
           </div>
           <label htmlFor="Inch">Inch</label>
           <div className="PlaceHolder">
-            <span className="peringatan">{peringatan}</span>
             <span className="ukuran">Inch</span>
             <input
-              type="text"
+              type="numeric"
               id="Inch"
               value={inch}
               onChange={(e) => setInch(e.target.value)}

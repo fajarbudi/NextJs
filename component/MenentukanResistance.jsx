@@ -7,7 +7,6 @@ export default function MenentukanResistance() {
   const [select1, setSelect1] = useState("");
   const [select2, setSelect2] = useState("");
   const [resistance, setResistance] = useState("");
-  const [peringatan, setPeringatan] = useState("");
   const [disable, setDisable] = useState("");
   const Input1 = Number(input1);
   const Input2 = Number(input2);
@@ -22,11 +21,9 @@ export default function MenentukanResistance() {
     } else if (Input1 == input1 && Input2 == input2) {
       document.getElementById("button4").classList.add("btn1");
       setDisable("");
-      setPeringatan("");
     } else {
       document.getElementById("button4").classList.remove("btn1");
       setDisable("disable");
-      setPeringatan("Masukkan Angka");
     }
   });
   const Hitung = () => {
@@ -37,7 +34,7 @@ export default function MenentukanResistance() {
     } else if (select1 === "watt1" && select2 === "ampere") {
       setResistance((input1 / Math.pow(input2, 2)).toFixed(2));
     } else {
-      console.log("salah");
+      console.log("Rumusnya Salah");
     }
   };
   return (
@@ -48,7 +45,6 @@ export default function MenentukanResistance() {
           <h5>Masukkan :</h5>
           <label htmlFor="input1">Watt / Volt</label>
           <div className="PlaceHolder">
-            <span className="peringatan">{peringatan}</span>
             <select
               className="ukuran"
               value={select1}
@@ -58,6 +54,7 @@ export default function MenentukanResistance() {
               <option value="volt">Volt</option>
             </select>
             <input
+              type="numeric"
               id="input1"
               value={input1}
               onChange={(e) => setInput1(e.target.value)}
@@ -65,7 +62,6 @@ export default function MenentukanResistance() {
           </div>
           <label htmlFor="input2">Watt / Ampere</label>
           <div className="PlaceHolder">
-            <span className="peringatan">{peringatan}</span>
             <select
               className="ukuran"
               value={select2}
@@ -75,6 +71,7 @@ export default function MenentukanResistance() {
               <option value="ampere">Amp</option>
             </select>
             <input
+              type="numeric"
               id="input2"
               value={input2}
               onChange={(e) => setInput2(e.target.value)}

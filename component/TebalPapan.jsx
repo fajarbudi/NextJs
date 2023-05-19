@@ -5,20 +5,17 @@ export default function TebalPapan2() {
   const [input, setInput] = useState("");
   const [particle, setParticle] = useState("");
   const [multiplex, setMultiplex] = useState("");
-  const [peringatan, setPeringatan] = useState("");
   const [disable, setDisable] = useState("");
   const Input = Number(input);
   useEffect(() => {
-    if (input === "") {
+    if (!Input) {
       document.getElementById("button1").classList.remove("btn1");
       setDisable("disable");
     } else if (Input == input) {
       document.getElementById("button1").classList.add("btn1");
-      setPeringatan("");
       setDisable("");
     } else {
       document.getElementById("button1").classList.remove("btn1");
-      setPeringatan("Masukkan Angka");
       setDisable("disable");
     }
   });
@@ -34,9 +31,9 @@ export default function TebalPapan2() {
           <h5>Masukkan :</h5>
           <label htmlFor="inch">Inch</label>
           <div className="PlaceHolder">
-            <span className="peringatan">{peringatan}</span>
             <span className="ukuran">Inch</span>
             <input
+              type="numeric"
               id="inch"
               value={input}
               onChange={(e) => setInput(e.target.value)}

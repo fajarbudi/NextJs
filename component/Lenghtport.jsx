@@ -7,7 +7,6 @@ export default function Lenghtport() {
   const [port, setPort] = useState("");
   const [diameter, setDiameter] = useState("");
   const [lenght, setLenght] = useState("");
-  const [peringatan, setPeringatan] = useState("");
   const [disable, setDisable] = useState("");
   const Freq = Number(freq);
   const Volume = Number(volume);
@@ -27,11 +26,9 @@ export default function Lenghtport() {
     ) {
       document.getElementById("button3").classList.add("btn1");
       setDisable("");
-      setPeringatan("");
     } else {
       document.getElementById("button3").classList.remove("btn1");
       setDisable("disable");
-      setPeringatan("Masukkan Angka");
     }
   });
   const Hasil =
@@ -47,10 +44,9 @@ export default function Lenghtport() {
           <h5>Masukkan :</h5>
           <label htmlFor="freq">Tunning Freq</label>
           <div className="PlaceHolder">
-            <span className="peringatan">{peringatan}</span>
             <span className="ukuran">Hz</span>
             <input
-              type="text"
+              type="numeric"
               id="freq"
               value={freq}
               onChange={(e) => setFreq(e.target.value)}
@@ -58,10 +54,9 @@ export default function Lenghtport() {
           </div>
           <label htmlFor="volume">Volume Box</label>
           <div className="PlaceHolder">
-            <span className="peringatan">{peringatan}</span>
             <span className="ukuran">Liter</span>
             <input
-              type="text"
+              type="numeric"
               id="volume"
               value={volume}
               onChange={(e) => setVolume(e.target.value)}
@@ -69,10 +64,9 @@ export default function Lenghtport() {
           </div>
           <label htmlFor="port">Jumlah Port</label>
           <div className="PlaceHolder">
-            <span className="peringatan">{peringatan}</span>
             <span className="ukuran"></span>
             <input
-              type="text"
+              type="numeric"
               id="port"
               value={port}
               onChange={(e) => setPort(e.target.value)}
@@ -80,10 +74,9 @@ export default function Lenghtport() {
           </div>
           <label htmlFor="diameter">Diameter Port</label>
           <div className="PlaceHolder">
-            <span className="peringatan">{peringatan}</span>
             <span className="ukuran">Cm</span>
             <input
-              type="text"
+              type="numeric"
               id="diameter"
               value={diameter}
               onChange={(e) => setDiameter(e.target.value)}

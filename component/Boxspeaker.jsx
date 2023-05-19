@@ -8,9 +8,8 @@ export default function Boxspeaker() {
   const [volume, setVolume] = useState("");
   const [lebar, setLebar] = useState("");
   const [panjang, setPanjang] = useState("");
-  const [peringatan, setPeringatan] = useState("");
   const [disable, setDisable] = useState("");
-  const [peringatan2, setPeringatan2] = useState("");
+  const [peringatan, setPeringatan] = useState("");
   const Gain = Number(gain);
   const Inch = Number(inch);
   const Tinggi = Number(tinggi);
@@ -18,25 +17,24 @@ export default function Boxspeaker() {
   const MiliLiter = 100 * 100 * ((Volume / 1000) * 100);
   const Lebar = inch * 2.54 + 6;
   useEffect(() => {
-    if (gain == "" && inch == "" && tinggi == "") {
+    if (!gain && !inch && !tinggi) {
       document.getElementById("button4").classList.remove("btn1");
       setDisable("disable");
     } else if (Gain == gain && Inch == inch && Tinggi == tinggi) {
       document.getElementById("button4").classList.add("btn1");
-      setPeringatan("");
       setDisable("");
     } else {
       document.getElementById("button4").classList.remove("btn1");
       setDisable("disable");
-      setPeringatan("Masukkan Angka");
     }
   });
   const Hitung = () => {
     if (gain > 8) {
-      setPeringatan2("Lebih Dari 8");
+      setPeringatan("Lebih Dari 8");
     } else if (gain < 0.5) {
-      setPeringatan2("Kurang Dari 0. 5");
+      setPeringatan("Kurang Dari 0. 5");
     } else {
+      setPeringatan("");
       setVolume((2.54 * gain * inch).toFixed(2));
       setLebar((inch * 2.54 + 6).toFixed(2));
       setPanjang((MiliLiter / Lebar / tinggi).toFixed(2));
@@ -51,10 +49,9 @@ export default function Boxspeaker() {
           <label htmlFor="Gain">Gain Factor</label>
           <div className="PlaceHolder">
             <span className="peringatan">{peringatan}</span>
-            <span className="peringatan">{peringatan2}</span>
             <input
               placeholder="Value =  0.5  -  8"
-              type="text"
+              type="numeric"
               id="Gain"
               value={gain}
               onChange={(e) => setGain(e.target.value)}
@@ -62,10 +59,9 @@ export default function Boxspeaker() {
           </div>
           <label htmlFor="Inch">Inch</label>
           <div className="PlaceHolder">
-            <span className="peringatan">{peringatan}</span>
             <span className="ukuran">Inch</span>
             <input
-              type="text"
+              type="numeric"
               id="Inch"
               value={inch}
               onChange={(e) => setInch(e.target.value)}
@@ -73,10 +69,9 @@ export default function Boxspeaker() {
           </div>
           <label htmlFor="Tinggi">Tinggi Box</label>
           <div className="PlaceHolder">
-            <span className="peringatan">{peringatan}</span>
             <span className="ukuran">Cm</span>
             <input
-              type="text"
+              type="numeric"
               id="Tinggi"
               value={tinggi}
               onChange={(e) => setTinggi(e.target.value)}
