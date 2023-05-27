@@ -7,7 +7,6 @@ export default function MenentukanVolt() {
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
   const [volt, setVolt] = useState("");
-  const [disable, setDisable] = useState("");
   const Input1 = Number(input1);
   const Input2 = Number(input2);
   useEffect(() => {
@@ -17,13 +16,13 @@ export default function MenentukanVolt() {
   useEffect(() => {
     if (Input1 == 0 && Input2 == 0) {
       document.getElementById("button3").classList.remove("btn1");
-      setDisable("disable");
+      document.getElementById("button3").setAttribute("disabled", "disable")
     } else if (Input1 == input1 && Input2 == input2) {
       document.getElementById("button3").classList.add("btn1");
-      setDisable("");
+      document.getElementById("button3").removeAttribute("disabled", "disable")
     } else {
       document.getElementById("button3").classList.remove("btn1");
-      setDisable("disable");
+      document.getElementById("button3").setAttribute("disabled", "disable")
     }
   });
   const Hitung = () => {
@@ -90,7 +89,6 @@ export default function MenentukanVolt() {
           </div>
           <button
             id="button3"
-            disabled={disable}
             className="btn1 btn2"
             onClick={() => Hitung()}
           >

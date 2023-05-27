@@ -7,7 +7,6 @@ export default function Lenghtport() {
   const [port, setPort] = useState("");
   const [diameter, setDiameter] = useState("");
   const [lenght, setLenght] = useState("");
-  const [disable, setDisable] = useState("");
   const Freq = Number(freq);
   const Volume = Number(volume);
   const Port = Number(port);
@@ -17,7 +16,7 @@ export default function Lenghtport() {
   useEffect(() => {
     if (freq == "" && volume == "" && port == "" && diameter == "") {
       document.getElementById("button3").classList.remove("btn1");
-      setDisable("disable");
+      document.getElementById("button3").setAttribute("disabled", "disable")
     } else if (
       Freq == freq &&
       Volume == volume &&
@@ -25,10 +24,10 @@ export default function Lenghtport() {
       diameter1 == diameter
     ) {
       document.getElementById("button3").classList.add("btn1");
-      setDisable("");
+      document.getElementById("button3").removeAttribute("disabled", "disable")
     } else {
       document.getElementById("button3").classList.remove("btn1");
-      setDisable("disable");
+      document.getElementById("button3").setAttribute("disabled", "disable")
     }
   });
   const Hasil =
@@ -95,7 +94,6 @@ export default function Lenghtport() {
           </div>
           <button
             id="button3"
-            disabled={disable}
             className="btn1 btn2"
             onClick={() => Hitung()}
           >

@@ -112,7 +112,7 @@ select{
   color: white;
   height: 35px;
   width: 100px;
-  background-color: #2471e6;
+  background-color: #1c70ee;
   border: 2px solid white;
   border-radius: 10px;
   margin-top: 20px;
@@ -125,19 +125,20 @@ select{
   color: white;
   height: 35px;
   width: 100px;
-  background-color: #2471e6;
+  background-color: #1c70ee;
   border: 2px solid white;
   border-radius: 10px;
   margin-top: 20px;
   margin-left: 33%;
 }
 .btn1:hover {
-  border: 2px solid #2471e6;
+  border: 2px solid #1c70ee;
   color: #2471e6;
   background-color: white;
   transform: scale(1.1);
   transition: 0.2s ease-in-out;
 }
+
 @media screen and (max-width: 1700px) {
   .container2 {
     display: flex;

@@ -7,7 +7,6 @@ export default function MenentukanResistance() {
   const [select1, setSelect1] = useState("");
   const [select2, setSelect2] = useState("");
   const [resistance, setResistance] = useState("");
-  const [disable, setDisable] = useState("");
   const Input1 = Number(input1);
   const Input2 = Number(input2);
   useEffect(() => {
@@ -17,13 +16,13 @@ export default function MenentukanResistance() {
   useEffect(() => {
     if (Input1 == 0 && Input2 == 0) {
       document.getElementById("button4").classList.remove("btn1");
-      setDisable("disable");
+      document.getElementById("button4").setAttribute("disabled", "disable")
     } else if (Input1 == input1 && Input2 == input2) {
       document.getElementById("button4").classList.add("btn1");
-      setDisable("");
+      document.getElementById("button4").removeAttribute("disabled", "disable")
     } else {
       document.getElementById("button4").classList.remove("btn1");
-      setDisable("disable");
+      document.getElementById("button4").setAttribute("disabled", "disable")
     }
   });
   const Hitung = () => {
@@ -34,7 +33,7 @@ export default function MenentukanResistance() {
     } else if (select1 === "watt1" && select2 === "ampere") {
       setResistance((input1 / Math.pow(input2, 2)).toFixed(2));
     } else {
-      console.log("Rumusnya Salah");
+      setResistance("Rumusnya Salah");
     }
   };
   return (
@@ -89,7 +88,6 @@ export default function MenentukanResistance() {
           </div>
           <button
             id="button4"
-            disabled={disable}
             className="btn1 btn2"
             onClick={() => Hitung()}
           >

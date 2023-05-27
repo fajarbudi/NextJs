@@ -7,7 +7,6 @@ export default function Duckresonator() {
   const [persegi, setPersegi] = useState("");
   const [inch, setInch] = useState("");
   const [peringatan, setPeringatan] = useState("");
-  const [disable, setDisable] = useState("");
   const Inch = Number(inch);
   const Gain = Number(gain);
   const Diameter = (Gain / 1.77) * 2.54;
@@ -17,13 +16,13 @@ export default function Duckresonator() {
   useEffect(() => {
     if (inch == "" && gain == "") {
       document.getElementById("button2").classList.remove("btn1");
-      setDisable("disable");
+      document.getElementById("button2").setAttribute("disabled", "disable")
     } else if (Inch == inch && Gain == gain) {
       document.getElementById("button2").classList.add("btn1");
-      setDisable("");
+      document.getElementById("button2").removeAttribute("disabled", "disable")
     } else {
       document.getElementById("button2").classList.remove("btn1");
-      setDisable("disable");
+      document.getElementById("button2").setAttribute("disabled", "disable")
     }
   });
   const Hitung1 = () => {
@@ -86,7 +85,6 @@ export default function Duckresonator() {
             />
           </div>
           <button
-            disabled={disable}
             id="button2"
             className="btn1 btn2"
             onClick={() => Hitung1()}

@@ -17,13 +17,13 @@ export default function MenentukanWaat() {
   useEffect(() => {
     if (!input1 && !input2) {
       document.getElementById("button1").classList.remove("btn1");
-      setDisable("disable");
+      document.getElementById("button1").setAttribute("disabled", "disable")
     } else if (Input1 == input1 && Input2 == input2) {
       document.getElementById("button1").classList.add("btn1");
-      setDisable("");
+      document.getElementById("button1").removeAttribute("disabled", "disable")
     } else {
       document.getElementById("button1").classList.remove("btn1");
-      setDisable("disable");
+      document.getElementById("button1").setAttribute("disabled", "disable")
     }
   });
   const Hitung = () => {

@@ -7,23 +7,22 @@ export default function () {
   const [ampere, setAmpere] = useState("");
   const [pilih, setPilih] = useState("");
   const [pilih2, setPilih2] = useState("");
-  const [disable, setDisable] = useState("");
   const Input1 = Number(input1);
   const Input2 = Number(input2);
   useEffect(() => {
     setPilih("watt");
     setPilih2("volt2");
-  });
+  },[]);
   useEffect(() => {
     if (input1 === "" && input2 === "") {
       document.getElementById("button2").classList.remove("btn1");
-      setDisable("disable");
+      document.getElementById("button2").setAttribute('disabled', 'disable')
     } else if (Input1 == input1 && Input2 == input2) {
       document.getElementById("button2").classList.add("btn1");
-      setDisable("");
+      document.getElementById("button2").removeAttribute("disabled", "disable")
     } else {
       document.getElementById("button2").classList.remove("btn1");
-      setDisable("disable");
+      document.getElementById("button2").setAttribute('disabled', 'disable')
     }
   });
   const Hitung = () => {
@@ -91,7 +90,6 @@ export default function () {
           <button
             id="button2"
             className="btn1 btn2"
-            disabled={disable}
             onClick={() => Hitung()}
           >
             Hitung

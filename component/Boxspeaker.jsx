@@ -8,7 +8,6 @@ export default function Boxspeaker() {
   const [volume, setVolume] = useState("");
   const [lebar, setLebar] = useState("");
   const [panjang, setPanjang] = useState("");
-  const [disable, setDisable] = useState("");
   const [peringatan, setPeringatan] = useState("");
   const Gain = Number(gain);
   const Inch = Number(inch);
@@ -19,13 +18,13 @@ export default function Boxspeaker() {
   useEffect(() => {
     if (!gain && !inch && !tinggi) {
       document.getElementById("button4").classList.remove("btn1");
-      setDisable("disable");
+      document.getElementById("button4").setAttribute("disabled", "disable")
     } else if (Gain == gain && Inch == inch && Tinggi == tinggi) {
       document.getElementById("button4").classList.add("btn1");
-      setDisable("");
+      document.getElementById("button4").removeAttribute("disabled", "disable")
     } else {
       document.getElementById("button4").classList.remove("btn1");
-      setDisable("disable");
+      document.getElementById("button4").setAttribute("disabled", "disable")
     }
   });
   const Hitung = () => {
@@ -110,7 +109,6 @@ export default function Boxspeaker() {
           </div>
           <button
             id="button4"
-            disabled={disable}
             className="btn1 btn2"
             onClick={() => Hitung()}
           >
