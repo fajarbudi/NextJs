@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Slide } from "react-awesome-reveal";
+import VideoBg from "./videoBg"
 export default function Lenghtport() {
   const [freq, setFreq] = useState("");
   const [volume, setVolume] = useState("");
@@ -39,6 +40,7 @@ export default function Lenghtport() {
     <>
       <Slide duration={1200} direction="left">
         <div className="length">
+          <VideoBg/>
           <h4>Length Port</h4>
           <h5>Masukkan :</h5>
           <label htmlFor="freq">Tunning Freq</label>

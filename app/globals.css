@@ -11,53 +11,69 @@ nav {
   background-image: linear-gradient(to right top, #2b86c5, #5c81d9, #9774dd, #d05ece, #ff3cac);
   padding: 6px 10px;
   border: 1px solid rgb(134, 173, 197);
-  border-radius: 10px;
+  border-radius: 30px;
   box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.8),
     inset 0 2px 2px rgba(255, 255, 255, 1), 0 5px 0 #ccc, 0 6px 0 #989898,
     0 13px 0 #dfdede;
 }
 .container2 {
+  border-radius: 10px;
   margin: 0px 0px 40px 0px;
   padding: 50px 0px 40px 0px;
   display: flex;
   justify-content: space-around;
 }
+video{
+  top: 0;
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: brightness(90%) contrast(110%);
+}
 .kotak_1 {
   position: relative;
+  overflow: hidden;
   border-radius: 10px;
-  background: linear-gradient(145deg, #2B86C5 0%, #FF3CAC 100%);
+  background: linear-gradient(145deg, #2B86C5, #FF3CAC);
   margin-bottom: 20px;
   height: 450px;
-  padding: 6px 15px;
+  padding: 6px 0px;
   border: 1px solid #b5b5b5;
   border-radius: 20px;
   box-shadow: 10px 10px 9px #c5c5c5,
   -10px -10px 9px #ffffff;
 }
 .resonator {
+  position: relative;
+  overflow: hidden;
   border-radius: 10px;
   background: linear-gradient(145deg, #2B86C5, #FF3CAC);
   height: 520px;
-  padding: 6px 15px;
+  padding: 6px 0px;
   border: 1px solid #b5b5b5;
   border-radius: 20px;
   box-shadow: 10px 10px 9px #c5c5c5,
   -10px -10px 9px #ffffff;
 }
 .length {
+  position: relative;
+  overflow: hidden;
   border-radius: 10px;
   background: linear-gradient(145deg, #2B86C5, #FF3CAC);
   height: 590px;
-  padding: 6px 15px;
+  padding: 6px 0px;
   border: 1px solid #b5b5b5;
   border-radius: 20px;
   box-shadow: 10px 10px 9px #c5c5c5,
   -10px -10px 9px #ffffff;
 }
 .box {
+  position: relative;
+  overflow: hidden;
   border-radius: 10px;
   background: linear-gradient(145deg, #2B86C5, #FF3CAC);
-  padding: 6px 15px 40px 15px;
+  padding: 6px 0px 40px 0px;
   border: 1px solid #b5b5b5;
   border-radius: 20px;
   box-shadow: 10px 10px 9px #c5c5c5,
@@ -66,13 +82,15 @@ nav {
 input {
   display: flex;
   justify-content: space-between;
-  margin: 0px 20px 20px;
-  padding-left: 20px;
+  margin: 0px 40px 20px;
+  padding: 0 15px;
   border: 1px solid white;
   border-radius: 8px;
 }
 
 h4 {
+  color: white;
+  position: relative;
   text-transform: capitalize;
   font-weight: 600;
   text-align: center;
@@ -80,7 +98,9 @@ h4 {
   margin-bottom: 20px;
 }
 h5 {
-  margin-left: 10px;
+  color: white;
+  position: relative;
+  margin-left: 30px;
   padding-top: 10px;
 }
 h6 {
@@ -88,7 +108,9 @@ h6 {
   padding-left: 500px;
 }
 label {
-  margin-left: 10px;
+  color: white;
+  position: relative;
+  margin-left: 40px;
 }
 .ukuran {
   position: absolute;
@@ -109,6 +131,7 @@ select{
   position: absolute;
 }
 .btn2{
+  position: relative;
   color: white;
   height: 35px;
   width: 100px;
@@ -168,4 +191,5 @@ select{
   .muncul{
     display: unset;
   }
+  
 }

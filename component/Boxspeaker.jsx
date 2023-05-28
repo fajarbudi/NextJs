@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Slide } from "react-awesome-reveal";
+import VideoBg from "./videoBg"
 export default function Boxspeaker() {
   const [gain, setGain] = useState("");
   const [inch, setInch] = useState("");
@@ -43,6 +44,7 @@ export default function Boxspeaker() {
     <>
       <Slide duration={1200} direction="left">
         <div className="box">
+        <VideoBg/>
           <h4>Box Speaker</h4>
           <h5>Masukkan :</h5>
           <label htmlFor="Gain">Gain Factor</label>

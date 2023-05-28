@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Slide } from "react-awesome-reveal";
+import VideoBg from "./videoBg"
 export default function Duckresonator() {
   const [gain, setGain] = useState("");
   const [lingkaran, setLingkaran] = useState("");
@@ -40,6 +41,7 @@ export default function Duckresonator() {
     <>
       <Slide duration={1200} direction="left">
         <div className="resonator">
+          <VideoBg/>
           <h4>Duck Resonator</h4>
           <h5>Masukkan :</h5>
           <label htmlFor="Gain1">Gain Factor</label>

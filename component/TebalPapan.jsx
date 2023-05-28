@@ -1,11 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Slide } from "react-awesome-reveal";
+import VideoBg from "./videoBg"
 export default function TebalPapan2() {
   const [input, setInput] = useState("");
   const [particle, setParticle] = useState("");
   const [multiplex, setMultiplex] = useState("");
-  const [disable, setDisable] = useState("");
   const Input = Number(input);
   useEffect(() => {
     if (!Input) {
@@ -27,6 +27,7 @@ export default function TebalPapan2() {
     <>
       <Slide duration={1200} direction="left">
         <div className="kotak_1">
+          <VideoBg/>
           <h4>Tebal Papan</h4>
           <h5>Masukkan :</h5>
           <label htmlFor="inch">Inch</label>

@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Slide } from "react-awesome-reveal";
+import VideoBg from "./videoBg"
 export default function MenentukanWaat() {
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
@@ -41,6 +42,7 @@ export default function MenentukanWaat() {
     <>
       <Slide duration={1200} direction="left">
         <div className="kotak_1">
+          <VideoBg/>
           <h4>Menentukan Watt</h4>
           <h5>Masukan :</h5>
           <label htmlFor="volt">Volt / Ampere</label>
