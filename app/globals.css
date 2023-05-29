@@ -16,16 +16,15 @@ h3 {
 nav {
   background-image: linear-gradient(to right top, #2b86c5, #5c81d9, #9774dd, #d05ece, #ff3cac);
   padding: 6px 10px;
-  border: 1px solid rgb(134, 173, 197);
   border-radius: 30px;
   box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.8),
     inset 0 2px 2px rgba(255, 255, 255, 1), 0 5px 0 #ccc, 0 6px 0 #989898,
     0 13px 0 #dfdede;
 }
-.container2 {
+section {
   border-radius: 10px;
   margin: 0px 0px 40px 0px;
-  padding: 50px 0px 40px 0px;
+  padding: 70px 0px 40px 0px;
   display: flex;
   justify-content: space-around;
 }
@@ -44,7 +43,6 @@ video{
   margin-bottom: 20px;
   height: 450px;
   padding: 6px 0px;
-  border: 1px solid #b5b5b5;
   border-radius: 20px;
   box-shadow: 10px 10px 9px #c5c5c5,
   -10px -10px 9px #ffffff;
@@ -55,7 +53,6 @@ video{
   background: linear-gradient(145deg, #2B86C5, #FF3CAC);
   height: 520px;
   padding: 6px 0px;
-  border: 1px solid #b5b5b5;
   border-radius: 20px;
   box-shadow: 10px 10px 9px #c5c5c5,
   -10px -10px 9px #ffffff;
@@ -66,7 +63,6 @@ video{
   background: linear-gradient(145deg, #2B86C5, #FF3CAC);
   height: 590px;
   padding: 6px 0px;
-  border: 1px solid #b5b5b5;
   border-radius: 20px;
   box-shadow: 10px 10px 9px #c5c5c5,
   -10px -10px 9px #ffffff;
@@ -76,7 +72,6 @@ video{
   overflow: hidden;
   background: linear-gradient(145deg, #2B86C5, #FF3CAC);
   padding: 6px 0px 40px 0px;
-  border: 1px solid #b5b5b5;
   border-radius: 20px;
   box-shadow: 10px 10px 9px #c5c5c5,
   -10px -10px 9px #ffffff;
@@ -84,9 +79,9 @@ video{
 input {
   display: flex;
   justify-content: space-between;
-  margin: 0px 40px 20px;
-  padding: 0 15px;
-  border: 1px solid white;
+  height: 25px;
+  margin: 0px 30px 20px;
+  padding: 5px 15px;
   border-radius: 8px;
 }
 
@@ -112,7 +107,7 @@ h6 {
 label {
   color: white;
   position: relative;
-  margin-left: 40px;
+  margin-left: 30px;
 }
 .ukuran {
   position: absolute;
@@ -137,7 +132,7 @@ select{
   color: white;
   height: 35px;
   width: 100px;
-  background-color: #1c70ee;
+  background-color: #0c67f0;
   border: 2px solid white;
   border-radius: 10px;
   margin-top: 20px;
@@ -150,14 +145,14 @@ select{
   color: white;
   height: 35px;
   width: 100px;
-  background-color: #1c70ee;
+  background-color: #0c67f0;
   border: 2px solid white;
   border-radius: 10px;
   margin-top: 20px;
   margin-left: 33%;
 }
 .btn1:hover {
-  border: 2px solid #1c70ee;
+  border: 2px solid #0c67f0;
   color: #2471e6;
   background-color: white;
   transform: scale(1.1);
@@ -165,18 +160,18 @@ select{
 }
 
 @media screen and (max-width: 1700px) {
-  .container2 {
+  section{
     display: flex;
     flex-wrap: wrap;
   }
   .kotak_1 {
-    margin: 0px auto 50px auto;
+    margin: 0px auto 70px auto;
   }
   .resonator {
-    margin: 0px auto 50px auto;
+    margin: 0px auto 70px auto;
   }
   .length {
-    margin: 0px auto 50px auto;
+    margin: 0px auto 70px auto;
   }
   .box {
     margin: 0px auto 0px auto;

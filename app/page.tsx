@@ -11,12 +11,12 @@ export default function halaman1() {
     return (
       <>
         <Navbar judul="Menghitung Box Speaker" />
-        <div className="container2 ">
+        <section>
           <Tebalpapan />
           <DuckResonator />
           <LenghtPort />
           <BoxSpeaker />
-        </div>
+        </section>
       </>
     );
 }

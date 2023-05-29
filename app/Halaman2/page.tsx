@@ -11,12 +11,12 @@ export default function halaman2() {
   return (
     <>
       <Navbar judul="Hukum Ohm" />
-      <div className="container2 ">
+      <section>
         <MenentukanWaat />
         <MenentukanAmp />
         <MenentukanVolt />
         <MenentukanResistance />
-      </div>
+      </section>
     </>
   );
 }
