@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Slide } from "react-awesome-reveal";
 import VideoBg from "./videoBg"
 export default function Lenghtport() {
   const [freq, setFreq] = useState("");
@@ -38,8 +37,10 @@ export default function Lenghtport() {
   };
   return (
     <>
-      <Slide duration={1200} direction="left">
-        <div className="length">
+        <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+        className="length">
           <VideoBg/>
           <h4>Length Port</h4>
           <h5>Masukkan :</h5>
@@ -102,7 +103,6 @@ export default function Lenghtport() {
             Hitung
           </button>
         </div>
-      </Slide>
     </>
   );
 }

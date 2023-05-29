@@ -39,8 +39,9 @@ export default function Duckresonator() {
   };
   return (
     <>
-      <Slide duration={1200} direction="left">
-        <div className="resonator">
+        <div data-aos="fade-up"
+             data-aos-anchor-placement="top-center"
+             className="resonator">
           <VideoBg/>
           <h4>Duck Resonator</h4>
           <h5>Masukkan :</h5>
@@ -94,7 +95,6 @@ export default function Duckresonator() {
             Hitung
           </button>
         </div>
-      </Slide>
     </>
   );
 }

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 h3 {
   color: white;
   align-items: center;
@@ -34,7 +40,6 @@ video{
 .kotak_1 {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
   background: linear-gradient(145deg, #2B86C5, #FF3CAC);
   margin-bottom: 20px;
   height: 450px;
@@ -47,7 +52,6 @@ video{
 .resonator {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
   background: linear-gradient(145deg, #2B86C5, #FF3CAC);
   height: 520px;
   padding: 6px 0px;
@@ -59,7 +63,6 @@ video{
 .length {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
   background: linear-gradient(145deg, #2B86C5, #FF3CAC);
   height: 590px;
   padding: 6px 0px;
@@ -71,7 +74,6 @@ video{
 .box {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
   background: linear-gradient(145deg, #2B86C5, #FF3CAC);
   padding: 6px 0px 40px 0px;
   border: 1px solid #b5b5b5;

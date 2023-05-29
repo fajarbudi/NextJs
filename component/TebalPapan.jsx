@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Slide } from "react-awesome-reveal";
 import VideoBg from "./videoBg"
 export default function TebalPapan2() {
   const [input, setInput] = useState("");
@@ -25,8 +24,10 @@ export default function TebalPapan2() {
   };
   return (
     <>
-      <Slide duration={1200} direction="left">
-        <div className="kotak_1">
+        <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+        className="kotak_1">
           <VideoBg/>
           <h4>Tebal Papan</h4>
           <h5>Masukkan :</h5>
@@ -67,7 +68,6 @@ export default function TebalPapan2() {
             Hitung
           </button>
         </div>
-      </Slide>
     </>
   );
 }

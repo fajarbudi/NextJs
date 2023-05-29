@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Slide } from "react-awesome-reveal";
 import VideoBg from "./videoBg"
 export default function MenentukanResistance() {
   const [input1, setInput1] = useState("");
@@ -39,8 +38,10 @@ export default function MenentukanResistance() {
   };
   return (
     <>
-      <Slide duration={1200} direction="left">
-        <div className="kotak_1">
+        <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+        className="kotak_1">
           <VideoBg/>
           <h4>Menentukan Resistance</h4>
           <h5>Masukkan :</h5>
@@ -96,7 +97,6 @@ export default function MenentukanResistance() {
             Hitung
           </button>
         </div>
-      </Slide>
     </>
   );
 }

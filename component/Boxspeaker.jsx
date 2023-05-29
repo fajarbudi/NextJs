@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Slide } from "react-awesome-reveal";
 import VideoBg from "./videoBg"
 export default function Boxspeaker() {
   const [gain, setGain] = useState("");
@@ -42,8 +41,10 @@ export default function Boxspeaker() {
   };
   return (
     <>
-      <Slide duration={1200} direction="left">
-        <div className="box">
+        <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+        className="box">
         <VideoBg/>
           <h4>Box Speaker</h4>
           <h5>Masukkan :</h5>
@@ -117,7 +118,6 @@ export default function Boxspeaker() {
             Hitung
           </button>
         </div>
-      </Slide>
     </>
   );
 }
