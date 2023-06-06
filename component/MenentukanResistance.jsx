@@ -7,22 +7,20 @@ export default function MenentukanResistance() {
   const [select1, setSelect1] = useState("");
   const [select2, setSelect2] = useState("");
   const [resistance, setResistance] = useState("");
-  const Input1 = Number(input1);
-  const Input2 = Number(input2);
   useEffect(() => {
     setSelect1("volt");
     setSelect2("ampere");
   }, []);
   useEffect(() => {
-    if (Input1 == 0 && Input2 == 0) {
+    if (input1 == "" || input2 == "") {
       document.getElementById("button4").classList.remove("btn1");
       document.getElementById("button4").setAttribute("disabled", "disable")
-    } else if (Input1 == input1 && Input2 == input2) {
+    } else if (isNaN(input1) || isNaN(input2)) {
+      document.getElementById("button4").classList.remove("btn1");
+      document.getElementById("button4").setAttribute("disabled", "disable")
+    } else {
       document.getElementById("button4").classList.add("btn1");
       document.getElementById("button4").removeAttribute("disabled", "disable")
-    } else {
-      document.getElementById("button4").classList.remove("btn1");
-      document.getElementById("button4").setAttribute("disabled", "disable")
     }
   });
   const Hitung = () => {

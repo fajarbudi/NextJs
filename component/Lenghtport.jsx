@@ -7,27 +7,18 @@ export default function Lenghtport() {
   const [port, setPort] = useState("");
   const [diameter, setDiameter] = useState("");
   const [lenght, setLenght] = useState("");
-  const Freq = Number(freq);
-  const Volume = Number(volume);
-  const Port = Number(port);
-  const diameter1 = Number(diameter);
   const DV2 = Math.pow(diameter, 2);
   const FB = Math.pow(freq, 2);
   useEffect(() => {
-    if (freq == "" && volume == "" && port == "" && diameter == "") {
+    if (freq == "" || volume == "" || port == "" || diameter == "") {
       document.getElementById("button3").classList.remove("btn1");
       document.getElementById("button3").setAttribute("disabled", "disable")
-    } else if (
-      Freq == freq &&
-      Volume == volume &&
-      Port == port &&
-      diameter1 == diameter
-    ) {
+    } else if (isNaN(freq) || isNaN(volume) || isNaN(port) || isNaN(diameter)) {
+      document.getElementById("button3").classList.remove("btn1");
+      document.getElementById("button3").setAttribute("disabled", "disable")
+    } else {
       document.getElementById("button3").classList.add("btn1");
       document.getElementById("button3").removeAttribute("disabled", "disable")
-    } else {
-      document.getElementById("button3").classList.remove("btn1");
-      document.getElementById("button3").setAttribute("disabled", "disable")
     }
   });
   const Hasil =

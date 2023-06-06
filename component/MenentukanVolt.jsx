@@ -7,22 +7,20 @@ export default function MenentukanVolt() {
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
   const [volt, setVolt] = useState("");
-  const Input1 = Number(input1);
-  const Input2 = Number(input2);
   useEffect(() => {
     setSelect1("ampere1");
     setSelect2("ohm");
   }, []);
   useEffect(() => {
-    if (Input1 == 0 && Input2 == 0) {
+    if (input1 == "" || input2 == "") {
       document.getElementById("button3").classList.remove("btn1");
       document.getElementById("button3").setAttribute("disabled", "disable")
-    } else if (Input1 == input1 && Input2 == input2) {
+    } else if (isNaN(input1) || isNaN(input2)) {
+      document.getElementById("button3").classList.remove("btn1");
+      document.getElementById("button3").setAttribute("disabled", "disable")
+    } else {
       document.getElementById("button3").classList.add("btn1");
       document.getElementById("button3").removeAttribute("disabled", "disable")
-    } else {
-      document.getElementById("button3").classList.remove("btn1");
-      document.getElementById("button3").setAttribute("disabled", "disable")
     }
   });
   const Hitung = () => {

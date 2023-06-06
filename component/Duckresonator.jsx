@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Slide } from "react-awesome-reveal";
 import VideoBg from "./videoBg"
 export default function Duckresonator() {
   const [gain, setGain] = useState("");
@@ -8,22 +7,20 @@ export default function Duckresonator() {
   const [persegi, setPersegi] = useState("");
   const [inch, setInch] = useState("");
   const [peringatan, setPeringatan] = useState("");
-  const Inch = Number(inch);
-  const Gain = Number(gain);
-  const Diameter = (Gain / 1.77) * 2.54;
+  const Diameter = (gain / 1.77) * 2.54;
   const Luaspersegi = ((Diameter * 3.14) / 2) * (Diameter / 2);
-  const Persegi_P = Inch * 2.5;
+  const Persegi_P = inch * 2.5;
   const Persegi_L = Luaspersegi / Persegi_P;
   useEffect(() => {
-    if (inch == "" && gain == "") {
+    if (inch == "" || gain == "") {
       document.getElementById("button2").classList.remove("btn1");
       document.getElementById("button2").setAttribute("disabled", "disable")
-    } else if (Inch == inch && Gain == gain) {
+    } else if (isNaN(inch) || isNaN(gain)) {
+      document.getElementById("button2").classList.remove("btn1");
+      document.getElementById("button2").setAttribute("disabled", "disable")
+    } else {
       document.getElementById("button2").classList.add("btn1");
       document.getElementById("button2").removeAttribute("disabled", "disable")
-    } else {
-      document.getElementById("button2").classList.remove("btn1");
-      document.getElementById("button2").setAttribute("disabled", "disable")
     }
   });
   const Hitung1 = () => {

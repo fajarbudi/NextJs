@@ -5,17 +5,16 @@ export default function TebalPapan2() {
   const [input, setInput] = useState("");
   const [particle, setParticle] = useState("");
   const [multiplex, setMultiplex] = useState("");
-  const Input = Number(input);
   useEffect(() => {
-    if (!Input) {
+    if (!input) {
       document.getElementById("button1").classList.remove("btn1");
       document.getElementById("button1").setAttribute("disabled", "disable")
-    } else if (Input == input) {
+    } else if (isNaN(input)) {
+      document.getElementById("button1").classList.remove("btn1");
+      document.getElementById("button1").setAttribute("disabled", "disable")
+    } else {
       document.getElementById("button1").classList.add("btn1");
       document.getElementById("button1").removeAttribute("disabled", "disable")
-    } else {
-      document.getElementById("button1").classList.remove("btn1");
-      document.getElementById("button1").setAttribute("disabled", "disable")
     }
   });
   const Hitung = () => {

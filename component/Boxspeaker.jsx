@@ -9,22 +9,19 @@ export default function Boxspeaker() {
   const [lebar, setLebar] = useState("");
   const [panjang, setPanjang] = useState("");
   const [peringatan, setPeringatan] = useState("");
-  const Gain = Number(gain);
-  const Inch = Number(inch);
-  const Tinggi = Number(tinggi);
   const Volume = 2.54 * gain * inch;
   const MiliLiter = 100 * 100 * ((Volume / 1000) * 100);
   const Lebar = inch * 2.54 + 6;
   useEffect(() => {
-    if (!gain && !inch && !tinggi) {
+    if (!gain || !inch || !tinggi) {
       document.getElementById("button4").classList.remove("btn1");
       document.getElementById("button4").setAttribute("disabled", "disable")
-    } else if (Gain == gain && Inch == inch && Tinggi == tinggi) {
+    } else if (isNaN(gain) || isNaN(inch) || isNaN(tinggi)) {
+      document.getElementById("button4").classList.remove("btn1");
+      document.getElementById("button4").setAttribute("disabled", "disable")
+    } else {
       document.getElementById("button4").classList.add("btn1");
       document.getElementById("button4").removeAttribute("disabled", "disable")
-    } else {
-      document.getElementById("button4").classList.remove("btn1");
-      document.getElementById("button4").setAttribute("disabled", "disable")
     }
   });
   const Hitung = () => {

@@ -7,22 +7,20 @@ export default function () {
   const [ampere, setAmpere] = useState("");
   const [pilih, setPilih] = useState("");
   const [pilih2, setPilih2] = useState("");
-  const Input1 = Number(input1);
-  const Input2 = Number(input2);
   useEffect(() => {
     setPilih("watt");
     setPilih2("volt2");
   },[]);
   useEffect(() => {
-    if (input1 === "" && input2 === "") {
+    if (input1 == 0 || input2 == 0){
       document.getElementById("button2").classList.remove("btn1");
       document.getElementById("button2").setAttribute('disabled', 'disable')
-    } else if (Input1 == input1 && Input2 == input2) {
+    } else if (isNaN(input1) || isNaN(input2)) {
+      document.getElementById("button2").classList.remove("btn1");
+      document.getElementById("button2").setAttribute('disabled', 'disable')
+    } else {
       document.getElementById("button2").classList.add("btn1");
       document.getElementById("button2").removeAttribute("disabled", "disable")
-    } else {
-      document.getElementById("button2").classList.remove("btn1");
-      document.getElementById("button2").setAttribute('disabled', 'disable')
     }
   });
   const Hitung = () => {
