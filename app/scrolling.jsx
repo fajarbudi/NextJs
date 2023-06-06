@@ -11,7 +11,7 @@ export default function scrolling(){
           scrollDwon?.classList.add("-ml-20")
           setTimeout(() =>{
           scrollDwon?.classList.remove("-ml-20")
-          },500)
+          },400)
     console.log(y)
     console.log(Heigth)
           if (Heigth == y){

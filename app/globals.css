@@ -19,9 +19,10 @@
   background-color: white;
   border-radius: 15px;
   animation: shake 1s linear infinite alternate;
-  box-shadow: inset 1.25px 2.73px 3.98px -0.50px rgba(26, 26, 255, 0.15),
-  inset -1.88px -4.09px 3.98px -0.50px rgba(26, 26, 255, 0.3),
-  3.76px 8.18px 2.98px -1.49px rgba(26, 26, 255, 0.6);
+  box-shadow: inset 1.00px 1.73px 2.73px -0.34px rgba(28, 28, 255, 0.15),
+  inset -1.50px -2.60px 2.73px -0.34px rgba(28, 28, 255, 0.3),
+  3.00px 5.20px 2.05px -1.02px rgba(28, 28, 255, 0.6);
+  
 }
 .scrollUp{
   display: flex;
@@ -36,9 +37,10 @@
   transition: all .5s ease-in-out;
   border-radius: 15PX;
   animation: shake 1s linear infinite alternate-reverse;
-  box-shadow: inset 1.25px 2.73px 3.98px -0.50px rgba(26, 26, 255, 0.15),
-  inset -1.88px -4.09px 3.98px -0.50px rgba(26, 26, 255, 0.3),
-  3.76px 8.18px 2.98px -1.49px rgba(26, 26, 255, 0.6);
+  box-shadow: inset 1.00px 1.73px 2.73px -0.34px rgba(28, 28, 255, 0.15),
+  inset -1.50px -2.60px 2.73px -0.34px rgba(28, 28, 255, 0.3),
+  3.00px 5.20px 2.05px -1.02px rgba(28, 28, 255, 0.6);
+  
 }
 h3 {
   color: white;
@@ -76,9 +78,8 @@ video{
   height: 450px;
   padding: 6px 0px;
   border-radius: 20px;
-  box-shadow: inset 2.90px 2.76px 5.66px -0.71px rgba(82, 82, 82, 0.15),
-  inset -4.35px -4.13px 5.66px -0.71px rgba(82, 82, 82, 0.3),
-  8.70px 8.27px 4.24px -2.12px rgba(82, 82, 82, 0.6);
+  box-shadow: 10px 10px 9px #c5c5c5,
+  -10px -10px 9px #ffffff;
 }
 .resonator {
   position: relative;
@@ -87,9 +88,8 @@ video{
   height: 520px;
   padding: 6px 0px;
   border-radius: 20px;
-  box-shadow: inset 2.90px 2.76px 5.66px -0.71px rgba(82, 82, 82, 0.15),
-  inset -4.35px -4.13px 5.66px -0.71px rgba(82, 82, 82, 0.3),
-  8.70px 8.27px 4.24px -2.12px rgba(82, 82, 82, 0.6);
+  box-shadow: 10px 10px 9px #c5c5c5,
+  -10px -10px 9px #ffffff;
 }
 .length {
   position: relative;
@@ -98,9 +98,8 @@ video{
   height: 590px;
   padding: 6px 0px;
   border-radius: 20px;
-  box-shadow: inset 2.90px 2.76px 5.66px -0.71px rgba(82, 82, 82, 0.15),
-  inset -4.35px -4.13px 5.66px -0.71px rgba(82, 82, 82, 0.3),
-  8.70px 8.27px 4.24px -2.12px rgba(82, 82, 82, 0.6);
+  box-shadow: 10px 10px 9px #c5c5c5,
+  -10px -10px 9px #ffffff;
 }
 .box {
   position: relative;
@@ -108,9 +107,8 @@ video{
   background: linear-gradient(145deg, #2B86C5, #FF3CAC);
   padding: 6px 0px 40px 0px;
   border-radius: 20px;
-  box-shadow: inset 2.90px 2.76px 5.66px -0.71px rgba(82, 82, 82, 0.15),
-  inset -4.35px -4.13px 5.66px -0.71px rgba(82, 82, 82, 0.3),
-  8.70px 8.27px 4.24px -2.12px rgba(82, 82, 82, 0.6);
+  box-shadow: 10px 10px 9px #c5c5c5,
+  -10px -10px 9px #ffffff;
 }
 input {
   display: flex;
