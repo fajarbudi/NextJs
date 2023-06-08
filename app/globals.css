@@ -7,12 +7,8 @@
   margin: 0;
   box-sizing: border-box;
 }
-.scrollDown{
+.scrollDown1  div{
   display: none;
-  align-items: center;
-  position: fixed;
-  gap: 8px;
-  top: 50%;
   writing-mode: vertical-lr;
   transition: all 1s ease-in-out;
   padding: 10px 5px;
@@ -23,6 +19,13 @@
   inset -1.50px -2.60px 2.73px -0.34px rgba(28, 28, 255, 0.3),
   3.00px 5.20px 2.05px -1.02px rgba(28, 28, 255, 0.6);
   
+}
+.scrollDown1{
+  display: none;
+  align-items: center;
+  position: fixed;
+  gap: 8px;
+  top: 50%;
 }
 .scrollUp{
   display: flex;
@@ -229,8 +232,11 @@ select{
   .muncul{
     display: unset;
   }
-  .scrollDown{
+  .scrollDown1  div{
     display: flex;
   flex-direction: row;
+  }
+  .scrollDown1{
+    display: flex;
   }
 }
