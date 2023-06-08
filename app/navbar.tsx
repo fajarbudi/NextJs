@@ -9,6 +9,7 @@ export default function Navbar(props: satu) {
   const { judul } = props;
   return (
     <>
+    <div className="navbar">
       <nav
       data-aos="fade-down"
       data-aos-delay="500"
@@ -65,6 +66,7 @@ export default function Navbar(props: satu) {
           </div>
         </div>
       </nav>
+      </div>
     </>
   );
 }
