@@ -19,7 +19,7 @@ export default function TebalPapan2() {
   });
   const Hitung = () => {
     setParticle(((input / 10) * 2.54).toFixed(2));
-    setMultiplex(((input / 10) * 2.54 * 0.6).toFixed(2));
+    setMultiplex(((input / 10) * 2.54 * (input > 10? 0.5 : 0.6)).toFixed(2));
   };
   return (
     <>

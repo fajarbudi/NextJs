@@ -7,7 +7,7 @@ export default function Duckresonator() {
   const [persegi, setPersegi] = useState("");
   const [inch, setInch] = useState("");
   const [peringatan, setPeringatan] = useState("");
-  const Diameter = (gain / 1.77) * 2.54;
+  const Diameter = (gain / (gain < 4 ? 1 : 1.77)) * 2.54;
   const Luaspersegi = ((Diameter * 3.14) / 2) * (Diameter / 2);
   const Persegi_P = inch * 2.5;
   const Persegi_L = Luaspersegi / Persegi_P;
